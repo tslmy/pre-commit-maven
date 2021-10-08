@@ -45,6 +45,4 @@ def execute(args: list, cwd: str, shell_runner=shell, env=os.environ.copy()):
 
 
 def print_error(execution_result: ExecutionResult, print_fn=print):
-    for line in execution_result.stdout.splitlines():
-        if line.startswith("[ERROR]"):
-            print_fn(f"{Colours.FAIL}{line}{Colours.ENDC}")
+    print_fn(execution_result.stdout)
