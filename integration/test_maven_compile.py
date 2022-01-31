@@ -2,7 +2,7 @@ from pre_commit_maven.maven_compile import main
 
 
 def test_integration_given_good_example_and_invoke_spotless_then_return_0(
-    temp_git_dir_with_resource
+    temp_git_dir_with_resource,
 ):
     cwd = temp_git_dir_with_resource("goodexample")
 
